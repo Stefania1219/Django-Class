@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+<!--Variables de entorno html:-->
+
+{% block titulo %} COINSA {% endblock %}
+
+{% block contenido %}
+{% load static %}
+<a type="button" href="{% url 'index' %}" class="btn btn-success" style="position: relative; left: 20px; top: 10px;">
+    <svg class="bi bi-arrow-left" width="2em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+            d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z" />
+        <path fill-rule="evenodd" d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+    </svg>Volver al Inicio
+</a>
+<section class="container-fluid">
+        <div class="row">
+            <div class="justify-content-md-center login-box" style="position: relative; left: 200px; top: -9px; width:500px; padding: 12px; ">
+                <form class="holi" method="POST">
+                    {% csrf_token %}
+                    <h1 id="list-item-4" class="text-center text-success">Contacténos</h1>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="">Tipo de Petición</label>
+                            {{ formulario.tipomsj }}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Tu Nombre</label>
+                            {{ formulario.usuario }}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Correo Electrónico</label>
+                            {{ formulario.correo }}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mensaje</label>
+                            {{ formulario.mensaje }}
+                        </div>
+                        <div class="form-group d-flex justify-content-between">
+                            <span class="col-md-9 mb-2">
+                                {% if "ok" in request.GET %}
+                                    <span class="alert alert-success mb-2">Se ha enviado tu mensaje</span>
+                                {% endif %}
+                                {% if "fail" in request.GET %}
+                                    <span class="alert alert-danger mb-2">No se puede Enviar tu mensaje</span>
+                                {% endif %}
+                            </span>
+                            <button type="submit" class="btn btn-lg btn-success col-md-3 mb-2">Enviar</button>
+                        </div>
+                </form>
+            </div>
+            <a href="docs/mailtrap.dock" download="mailtrap.dock">Descargar Imagen de Mailtrap</a>
+            <div class="col-md-7">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2656641196904!2d-75.57890878573411!3d6.228663828249847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429b57a0bcae5%3A0xf288e44ea786789f!2sSaciar!5e0!3m2!1ses-419!2sco!4v1590620496386!5m2!1ses-419!2sco"
+                    width="450" height="550" frameborder="0" style="position: relative; left: 500px; top: -600px;"
+                    allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+</section>
+ {% endblock %}

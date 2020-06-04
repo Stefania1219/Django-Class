@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+<!--Variables de entorno html:-->
+
+{% block titulo %} COINSA {% endblock %}
+
+{% block contenido %}
+    {% load static %}
+    
+        <div class="menu list-group">
+            <nav class="">
+                <ul class="">
+                    <li class="">
+                        <img src="static/assets/media/img/logo2.jpg" alt=""
+                            style="width: 83px; margin-left: 30px; margin-right: 50px; margin-top: 8px;">
+                    </li>
+                    <li>
+                        <a class="" href="#list-item-1">¿Qué es COINSA?</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#list-item-2">¿Quiénes somos?</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{% url 'nosotros' %}">Nuestro equipo de trabajo</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{% url 'contacto' %}">Contáctenos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    
+<div class="jumbotron bg-dark">
+    <img src="static/assets/media/img/fon.jpeg" alt="" height="350px" width="1280px"
+        style="position: absolute; top:85px;">
+</div>
+<hr class="my-4">
+<div class="container" style="margin-top:80px;">
+    <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+        <div style="padding: 10px; height: 500px;">
+            <h1 id="list-item-1" class="text-center text-success" style="position: relative; top:30px;">¿Qué es COINSA?
+            </h1>
+            <div class="row justify-content-md-center">
+                <img src="static/assets/media/img/3190343.jpg" alt=""
+                    style="width: 300px;  position: relative; right: 60px;">
+                <p style="width: 500px; display: flex; align-items: center; font-size: 20px;">
+                    COINSA es una aplicacion web de control de inventario que está especialmente diseñada para la
+                    Fundacion Saciar. Esta aplicacion
+                    cuenta con formularios para los registros de sus productos y vistas para visualizar que contiene
+                    su bodega.
+                </p>
+                <p style=" display: flex; align-items: center; font-size: 20px;">
+                    Si quieres saber más sobre nuestra Fundacion Saciar, da <a href=""> Click Aquí </a>
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <div class="col justify-content-md-center" style="padding: 10px; border-radius: 15px; background: #ECF3F4;">
+            <h1 id="list-item-2" class="text-center text-success">¿Quiénes somos?</h1>
+            <br>
+            <div class="row justify-content-md-center">
+                <img src="static/assets/media/img/quienes.jpg" alt="" style="width: 400px; margin-right: 50px;">
+                <p style="width: 500px; font-size: 20px;">
+                    somos un grupo de aprendices Sena, que nos capasitamos para desarrollar una app que pueda ser util
+                    para los usuarios.
+                    Nuestras diferentes personalidades y capacidades nos ayudann a unirnos como
+                    equipo para dar nuevas ideas para un sistema de inventarios
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+</div>
+<div class="sticky-container">
+    <ul class="sticky">
+        <li>
+            <img src="static/assets/media/img/facebook.png" width="44" height="44">
+            <p>Compartir en:<br>Facebook</p>
+        </li>
+        <li>
+            <img src="static/assets/media/img/twitter.png" width="42" height="42">
+            <p>Compartir en:<br>Twitter</p>
+        </li>
+        <li>
+            <img src="static/assets/media/img/google.png" width="42" height="42">
+            <p>Compartir en:<br>Google+</p>
+        </li>
+        <li>
+            <img src="static/assets/media/img/linkedin.png" width="40" height="42">
+            <p>Compartir en:<br>LinkedIn</p>
+        </li>
+        <li>
+
+            <img src="static/assets/media/img/pinterest.png" width="40" height="42">
+            <p>Compartir en:<br>Pinterest</p>
+        </li>
+    </ul>
+</div>
+<div class="cards">
+    <div class="card">
+        <span class="close"></span>
+        <span class="arrow"></span>
+    </div>
+</div>
+<footer>
+<p class="text-center"> 2020&copy;</p>
+</footer>
+
+{% endblock %}
