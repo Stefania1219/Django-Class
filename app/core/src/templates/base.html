@@ -24,7 +24,36 @@
 </head>
 
 <body>
+    <!-- Menú -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light flex-column flex-md-row bd-navbar">
+    <div class="menu list-group">
+        <nav class="">
+            <ul class="">
+                <li class="">
+                    <img src="{% static 'assets/media/img/logo2.jpg' %}" alt=""
+                        style="width: 83px; margin-left: 30px; margin-right: 50px; margin-top: 8px;">
+                </li>
+                <li>
+                    <a class="" href="#list-item-1">¿Qué es COINSA?</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#list-item-2">¿Quiénes somos?</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{% url 'nosotros' %}">Nuestro equipo de trabajo</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{% url 'contacto' %}">Contáctenos</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
     {% block contenido %} {% endblock%}
+    <!-- Pie de pagina -->
+    <footer class="text-center">
+        <span class="text-dark"><b>&copy; 2020 - Stefanía Giraldo Monsalve</b><em> Products, Inc. All rights reserved.</em><b> Teléfono: </b></span>
+    </footer>
     <!-- JavaScript -->
     <!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

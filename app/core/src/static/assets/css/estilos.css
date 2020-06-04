@@ -1,3 +1,10 @@
+.jumbotron{
+  background-image: url(imagenes/img1.jpg);
+  background-repeat: no-repeat;
+  background-size: 1365px;
+  background-attachment: fixed;
+}
+
 .menu ul{
     list-style: none;
     margin: 0;
@@ -9,7 +16,7 @@
 }
 
 .menu ul li a{
-    color: #000000;
+    color: white;
     display: block;
     padding: 20px 20px;
     text-decoration: none;
@@ -24,7 +31,11 @@ a {
 }
 a:hover {
     opacity: 100;
+    overflow: hidden;
 }
+
+
+
 
 hr.new4 {
     border: 1px solid white;
@@ -48,7 +59,6 @@ hr.new4 {
 * {
   padding: 0;
   margin: 0;
-  
 }
 
 header {
@@ -83,6 +93,7 @@ nav {
   nav ul li:hover {
     background: #3ead47;
   }
+
 
 
 
@@ -148,11 +159,12 @@ nav {
   padding: 20px;
   text-align: center;
 }
+
 .photo-perfil1,
 .photo-perfil2,
 .photo-perfil3{
   margin: auto;
-  width: 120px;
+  width: 130px;
   height: 120px;
   background-size: cover;
   border-radius: 50%;
@@ -160,20 +172,14 @@ nav {
   top: -60px;
 }
 .photo-perfil1{
-  background:
-  url(src/static/assets/media/img/stefa.jpg);
   background-size:  101px;
   background-position: 15px 1px;
 }
 .photo-perfil2{
-  background:
-  url(static/assets/media/perfiles/img/dani.jpg);
   background-size: 100px;
   background-position: 15px 1px;
 }
 .photo-perfil3{
-  background:
-  url(static/assets/media/img/karen.jpg);
   background-size: 100px;
   background-position: 15px 1px;
 }
