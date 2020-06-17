@@ -1,10 +1,3 @@
-.jumbotron{
-  background-image: url(imagenes/img1.jpg);
-  background-repeat: no-repeat;
-  background-size: 1365px;
-  background-attachment: fixed;
-}
-
 .menu ul{
     list-style: none;
     margin: 0;
@@ -16,7 +9,7 @@
 }
 
 .menu ul li a{
-    color: white;
+    color: black;
     display: block;
     padding: 20px 20px;
     text-decoration: none;
@@ -62,7 +55,7 @@ hr.new4 {
 }
 
 header {
-  background: rgba(0,0,0,0.9);
+  background: rgba(133, 132, 132, 0.9);
   width: 100%;
   position: fixed;
   z-index: 100;
@@ -86,7 +79,7 @@ nav {
   nav ul li a {
     display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
     padding: 20px;
-    color: #fff;
+    color: #000000;
     text-decoration: none;
   }
 
