@@ -6,6 +6,7 @@
 
 {% block contenido %}
 {% load static %}
+{% for article in object_list %}
 <a type="button" href="{% url 'index' %}" class="btn btn-success" style="position: relative; left: 20px; top: 10px;">
     <svg class="bi bi-arrow-left" width="2em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
         xmlns="http://www.w3.org/2000/svg">
@@ -18,29 +19,30 @@
 <div class="container-testimonials">
     <div class="testimonial border border-success">
         <img src="{% static 'assets/media/img/stefa.jpg' %}" class="photo-perfil1" alt="Foto de perfil">
-        <h2>{{nomEstu1}}</h2>
-        <h4 class="text-success">{{subti}}</h4>
-        <p class="parrafo1">{{parr1}}</p>
-        <!--<p>Reporter: {{ object.reporter }}</p>
-        <p>Published: {{ object.pub_date|date }}</p>
-        <p>Date: {{ now|date }}</p>-->
+        <h2>{{ article.nombUser }} {{ article.apelUser }}
+            <h4 class="text-success">{{ article.profeUser }}</h4>
+            <p class="parrafo1">+54 {{ article.teleUser }}</p>
     </div>
     <div class="testimonial border border-success">
         <img src="{% static 'assets/media/img/dani.jpg' %}" class="photo-perfil2" alt="Foto de perfil">
-        <h2>{{nomEstu2}}</h2>
-        <h4 class="text-success">{{subti}}</h4>
-        <p class="parrafo2">{{parr2}}</p>
+        <h2>daniela zapata</h2>
+        <h4 class="text-success">{{ article.profeUser }}</h4>
+        <p class="parrafo1">+54 {{ article.teleUser }}</p>
     </div>
     <div class="testimonial border border-success">
         <img src="{% static 'assets/media/img/karen.jpg' %}" class="photo-perfil3" alt="Foto de perfil">
-        <h2>{{nomEstu3}}</h2>
-        <h4 class="text-success">{{subti}}</h4>
-        <p class="parrafo3">{{parr3}}</p>
+        <h2>karen vásquez </h2>
+        <h4 class="text-success">{{ article.profeUser }}</h4>
+        <p class="parrafo1">+54 {{ article.teleUser }}</p>
     </div>
 </div>
 <footer class="text-center">
     <span class="text-dark"><b>&copy; 2020 - Stefanía Giraldo Monsalve</b><em> Products, Inc. All rights
             reserved.</em><b> Teléfono: </b></span>
 </footer>
+{% empty %}
+<li>{{ article.nombUser }} {{ article.apelUser }}</li>
+{% endfor %}
+
 
 {% endblock %}
